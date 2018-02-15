@@ -124,7 +124,7 @@ public class Main {
     System.out.println(casey.prize);
 
     Cat myCat = new Cat();
-    myCat.setColor("tabby");
+    myCat.setColor("black");
   }
 
 }
