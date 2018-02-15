@@ -1,5 +1,5 @@
 // Austin Horne 
-// A de
+// A demonstration of classes
 class Bicycle {
   private int speed;
   private int cadence;
