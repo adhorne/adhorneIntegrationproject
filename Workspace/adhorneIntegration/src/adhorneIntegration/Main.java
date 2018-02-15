@@ -129,12 +129,7 @@ public class Main {
 
 }
 
-class Dog {
-  double weight;
-  int age;
-  short prize;
 
-}
 
 class Bicycle {
   private int speed;
