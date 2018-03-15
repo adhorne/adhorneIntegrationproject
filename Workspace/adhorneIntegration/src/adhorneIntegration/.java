@@ -1,5 +1,5 @@
 Integ. Pdi 2 
-public class while {
+public class whileloop {
 
 	public static void main(String[] args) {
 		int counter = 0;
@@ -12,7 +12,7 @@ public class while {
 
 }
 
-public class for {
+public class forloop {
 
 	public static void main(String[] args) {
 		for(int counter=1;counter<=10;counter++) {
@@ -36,4 +36,6 @@ public class Stringbuilder {
 		        System.out.println(sb);
 		    }
 		}
+		
+		
 	
