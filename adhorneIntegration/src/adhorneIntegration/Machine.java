@@ -1,5 +1,7 @@
 package adhorneIntegration;
 
+// Austin Horne 
+// A demonstration of constructors 
 class Machine {
   private String name;
   private int code;

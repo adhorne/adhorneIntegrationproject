@@ -1,5 +1,6 @@
 package adhorneIntegration;
-
+// Austin Horne 
+// A demonstration of classes
 public class Car {
   private int speed;
   private String make;
@@ -26,7 +27,7 @@ public class Car {
     return make;
   }
 
-  public void setSpeed(String m) {
+  public void setMake(String m) {
     make = m;
   }
 }

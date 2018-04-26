@@ -1,14 +1,38 @@
 package adhorneIntegration;
 
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Main {
   // Austin Horne
   // Showing off my skills that I learned.
   public static void main(String[] args) {
-    // System.out.println("Hello World!");
 
-    // Scanner scan = new Scanner(System.in);
+    System.out.println("Hello World!");
+
+    Pizza pizza1 = new Pizza();
+    Wings wings1 = new Wings();
+
+    pizza1.eat();
+    wings1.eat();
+
+    // Polymorphism is the ability of an object to take on many forms.
+    // The most common use of polymorphism in OOP occurs when a parent
+    // class reference is used to refer to a child class object.
+
+    Suv hyundai = new Suv();
+    Truck chevrolet = new Truck();
+    Vehicle[] myVehicles = { hyundai, chevrolet };
+
+    for (Vehicle anVehicle : myVehicles) {
+      anVehicle.showMake();
+      anVehicle.showSpeed();
+    }
+
+    LocalDate currentDate = LocalDate.now();
+    LocalTime currentTime = LocalTime.now();
+    System.out.println("date/time creation: currentTime: " + currentTime);
+    System.out.println("date/time creation: currentDate: " + currentDate);
 
     // Variable is a value that can be changed.
     // Primitive types are the most
@@ -47,31 +71,31 @@ public class Main {
     int result = 6 + 2;
     // result is now 8
     System.out.println("1 + 2 = " + result);
-    int original_result = result;
+    int OriginalResult = result;
 
     result = result - 1;
     // result is now 7
-    System.out.println(original_result + " - 1 = " + result);
-    original_result = result;
+    System.out.println(OriginalResult + " - 1 = " + result);
+    OriginalResult = result;
 
     result = result * 2;
     // result is now 14
-    System.out.println(original_result + " * 2 = " + result);
-    original_result = result;
+    System.out.println(OriginalResult + " * 2 = " + result);
+    OriginalResult = result;
 
     result = result / 2;
     // result is now 7
-    System.out.println(original_result + " / 2 = " + result);
-    original_result = result;
+    System.out.println(OriginalResult + " / 2 = " + result);
+    OriginalResult = result;
 
     result = result + 8;
     // result is now 15
-    System.out.println(original_result + " + 8 = " + result);
-    original_result = result;
+    System.out.println(OriginalResult + " + 8 = " + result);
+    OriginalResult = result;
 
     result = result % 7;
     // result is now 1
-    System.out.println(original_result + " % 7 = " + result);
+    System.out.println(OriginalResult + " % 7 = " + result);
 
     // Java does integer division,
     // which basically is the same
@@ -107,16 +131,18 @@ public class Main {
 
     Bicycle myBike = new Bicycle();
     myBike.setSpeed(5);
+    myBike.setCadence(60);
     System.out.println(myBike.getSpeed());
+    System.out.println(myBike.getCadence());
 
     Dog casey = new Dog();
-    String breed = "beagle";
+    String breed1 = "beagle";
     String breed2 = "Beagle";
     String breed3 = "  Beagle  ";
     casey.weight = (double) 21.34;
     casey.age = 14;
     casey.prize = 300;
-    System.out.println(breed.toUpperCase().charAt(0) + breed.substring(1));
+    System.out.println(breed1.toUpperCase().charAt(0) + breed1.substring(1));
     System.out.println(breed2.toLowerCase().charAt(0) + breed2.substring(1));
     System.out.println(breed3.trim());
     System.out.println(casey.weight);
@@ -132,7 +158,7 @@ public class Main {
 
     // Integration PSI 2:
 
-    int values[] = { 10, 34, 45, 23, 15 };
+    int[] values = { 10, 34, 45, 23, 15 };
     int sum = 0;
     int largest = values[0];
     int smallest = values[0];
@@ -171,12 +197,12 @@ public class Main {
     String palindrome = "Racecar";
     StringBuilder sb = new StringBuilder(palindrome);
     sb.reverse(); // reverse it
-    System.out.println(sb); 
-    
+    System.out.println(sb);
+
     StringBuilder str = new StringBuilder("Austin Horne");
     str.insert(6, " Dwight ");
-    System.out.println(str); 
-    
+    System.out.println(str);
+
     StringBuilder de = new StringBuilder("I ate 1000 Strawberries");
     de.delete(8, 10);
     System.out.println(de);
@@ -202,15 +228,17 @@ public class Main {
     index = 0;
 
     while (found == false && index < scores.length) {
-      if (scores[index] == 78)
+      if (scores[index] == 78) {
         found = true;
-      else
+      } else {
         index = index + 1;
+      }
     }
-    if (found)
+    if (found) {
       System.out.println("You earned 78 on test number " + (index + 1));
-    else
+    } else {
       System.out.println("You did not earn an 78 on any test.");
+    }
   }
 
 }
